@@ -23,11 +23,10 @@
 //    CTCarrier *carrier = [netinfo subscriberCellularProvider];
 //    NSLog(@"Carrier Name: %@", [carrier carrierName]);
 //    NSString *dateString = [carrier carrierName];
-    NSDate *currDate = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"dd.MM.YY HH:mm:ss"];
-    NSString *dateString = [dateFormatter stringFromDate:currDate];
-      return dateString;
+   NSString* uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
+    NSLog(@"UDID:: %@", uniqueIdentifier);
+      return uniqueIdentifier;
+ 
     
 }
 
