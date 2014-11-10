@@ -7,11 +7,11 @@ function MyPlugin() {}
 MyPlugin.prototype.getCarrierInfo = function() {
   exec(function(result){
       // result handler
-      alert(result);
+      return(result);
     },
     function(error){
       // error handler
-      alert("Error" + error);
+      return("Error" + error);
     }, 
     "MyPlugin", 
     "getCarrierInfo",
