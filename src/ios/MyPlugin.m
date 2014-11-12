@@ -29,9 +29,23 @@
     
     NSString* uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
     NSLog(@"UDID:: %@", uniqueIdentifier);
-     NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:3];
     
-    [devProps setObject:uniqueIdentifier forKey:@"model"];
+      
+    NSString* appversion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    
+    NSString* appname = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity:3];
+    
+
+      [dict setObject:[NSString stringWithString:appversion] forKey:@"appversion"];
+    [dict setObject:[NSString stringWithString:appname] forKey:@"appname"];
+   
+
+     NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:5];
+    
+    [devProps setObject:appversion forKey:@"appversion"];
+    [devProps setObject:appname forKey:@"appname"];
+    [devProps setObject:uniqueIdentifier forKey:@"uuid"];
     [devProps setObject:@"iOS" forKey:@"platform"];
     [devProps setObject:dateString forKey:@"version"];
     NSLog(@"UDID:: %@", devProps);
