@@ -34,7 +34,7 @@
     NSString* appversion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     
     NSString* appname = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity:3];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity:5];
     
 
       [dict setObject:[NSString stringWithString:appversion] forKey:@"appversion"];
