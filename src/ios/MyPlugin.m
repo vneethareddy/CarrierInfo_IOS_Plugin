@@ -41,7 +41,7 @@
     [devProps setObject:appname forKey:@"appname"];
     [devProps setObject:[carrier carrierName] forKey:@"carriername"];
     [devProps setObject:[carrier mobileNetworkCode] forKey:@"mnc"];
-    [devProps setObject:[carrier mobileCountryCode] forKey:@"mcc 
+    [devProps setObject:[carrier mobileCountryCode] forKey:@"mcc"];
  NSDictionary* devReturn = [NSDictionary dictionaryWithDictionary:devProps];
     return devReturn;
 }
