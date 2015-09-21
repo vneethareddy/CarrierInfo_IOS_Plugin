@@ -73,7 +73,7 @@
     
     
     
-    NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:9];
+    NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:11];
     
     [devProps setObject:appversion forKey:@"appversion"];
     [devProps setObject:appname forKey:@"appname"];
